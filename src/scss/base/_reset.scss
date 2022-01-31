@@ -1,0 +1,29 @@
+@mixin reset {
+    margin: 0;
+    padding: 0;
+  }
+  
+  @mixin reset-list {
+    @include reset;
+    list-style: none;
+  }
+  
+  @mixin display-none {
+    display: none;
+  }
+  
+  @mixin border-none {
+    border: none;
+  }
+  
+  @mixin text-decoration-none {
+    text-decoration: none;
+  }
+  
+  @mixin outline-none {
+    outline: none;
+  }
+  
+  @mixin full-width {
+    width: 100%;
+  }

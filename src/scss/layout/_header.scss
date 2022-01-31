@@ -1,0 +1,32 @@
+.header-navigation {
+  @include make-flex;
+  @include add-align-elements($align-items: center);
+  @include font-size(11px, 16.5px);
+
+
+  .header-logo-container {
+    @include make-flex;
+    @include add-align-elements($align-items: center);
+    @include text-style($color: white, $transform: uppercase);
+    @include add-gap($column-gap: 16px);
+    @include add-margin($right: 90px)
+  }
+
+  .header-menu {
+    @include make-flex;
+    @include add-align-elements($align-items: center);
+    @include text-style($color: white, $transform: uppercase);
+    @include add-gap($column-gap: 24px);
+  }
+
+  .header-search-block {
+    @include make-flex;
+    @include add-margin($left: 450px)
+  }
+}
+
+.bg-baner {
+  background-image: url('../assets/images/banner.png');
+  background-position: center;
+  background-size: cover;
+}

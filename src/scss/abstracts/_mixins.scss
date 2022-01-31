@@ -1,0 +1,90 @@
+@mixin reset {
+    margin: 0;
+    padding: 0;
+  }
+  
+  @mixin reset-list {
+    @include reset;
+    list-style: none;
+  }
+  
+  @mixin display-none {
+    display: none;
+  }
+  
+  @mixin border-none {
+    border: none;
+  }
+  
+  @mixin text-decoration-none {
+    text-decoration: none;
+  }
+
+  
+  @mixin full-width {
+    width: 100%;
+  }
+
+/*Spacers*/
+@mixin add-margin($top: false, $right: false, $bottom: false, $left: false) {
+    @if $top { margin-top: rem($top) };
+    @if $right { margin-right: rem($right) };
+    @if $bottom { margin-bottom: rem($bottom) };
+    @if $left { margin-left: rem($left) };
+}
+
+@mixin add-padding($top: false, $right: false, $bottom: false, $left: false) {
+    @if $top { margin-top: rem($top) };
+    @if $right { margin-right: rem($right) };
+    @if $bottom { margin-bottom: rem($bottom) };
+    @if $left { margin-left: rem($left) };
+}
+
+@mixin add-gap($column-gap: false, $row-gap: false) {
+    @if $column-gap { column-gap: rem($column-gap); }
+    @if $row-gap { row-gap: rem($row-gap); }
+}
+
+/*Flexbox*/
+@mixin make-flex($display: flex, $direction: false, $wrap: false) {
+    @if $display { display: $display};
+    @if $direction { flex-direction: $direction };
+    @if $wrap { flex-wrap: $wrap };
+}
+
+@mixin add-align-elements($justify-content: false, $align-content: false, $align-items: false) {
+    @if $justify-content { justify-content: $justify-content };
+    @if $align-content { align-content: $align-content};
+    @if $align-items { align-items: $align-items};
+}
+
+/*Typography*/
+
+@mixin typography($list, $size, $device: "desctop") {
+    $value: map-get($list, $device, $size);
+    font-size: rem($value);
+}
+
+@mixin font-face($font-family, $weight: normal, $style: normal) {
+    @font-face {
+        font-family: $font-family;
+        font-weight: $weight;
+        font-style: $style;
+        src: url("/src/assets/fonts/#{$font-family}.ttf");
+    }
+}
+
+@mixin text-style($color: false, $weight: false, $transform: false,) {
+    @if $color {
+      $value-color: map-get($colors, $color);
+      color: $value-color;
+    }
+    @if $weight { font-weight: $weight; }
+    @if $transform { text-transform: $transform; }
+}
+
+@mixin font-size($font-size: $base-font-size, $line-height: $base-line-height) {
+	@if $font-size { font-size: rem($font-size) };
+	@if $line-height {line-height: rem($line-height);
+	}
+}

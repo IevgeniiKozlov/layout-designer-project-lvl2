@@ -1,0 +1,17 @@
+@use "sass:math";
+
+@function rem($size) {
+    @if type-of($size) == 'number' and isPxUnit($size) {
+        @return math.div($size, $rem-base) * 1rem;
+    }
+    @return $size;
+}
+
+@function isPxUnit($value) {
+    @if unit($value) == 'px' {
+        @return true;
+    }
+    @else {
+        @return false;
+    }
+}

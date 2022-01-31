@@ -1,0 +1,17 @@
+@include font-face("Roboto-Regular");
+@include font-face("Roboto-Bold", "bold");
+
+
+h1 {
+    @include typography($heading-size, "h1", "desctop");
+    @include text-style($transform: uppercase, $color: white);
+
+    // @include for-phone {
+    //     @include typography($heading-size, "h1", "mobile");
+    // }
+}
+
+h2 {
+    @include typography($heading-size, "h2", "desctop");
+    @include text-style($transform: uppercase, $color: white)
+}

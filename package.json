@@ -1,0 +1,24 @@
+{
+  "name": "layout-designer-project-lvl2",
+  "version": "1.0.0",
+  "description": "[![Actions Status](https://github.com/IevgeniiKozlov/layout-designer-project-lvl2/workflows/hexlet-check/badge.svg)](https://github.com/IevgeniiKozlov/layout-designer-project-lvl2/actions)",
+  "main": "",
+  "scripts": {
+    "start": "sass ./src/scss/app.scss ./src/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IevgeniiKozlov/layout-designer-project-lvl2.git"
+  },
+  "author": "Kozlov Ievgenii",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IevgeniiKozlov/layout-designer-project-lvl2/issues"
+  },
+  "homepage": "https://github.com/IevgeniiKozlov/layout-designer-project-lvl2#readme",
+  "devDependencies": {
+    "htmlhint": "^1.1.0",
+    "sass": "^1.47.0",
+    "stylelint": "^14.2.0"
+  }
+}
