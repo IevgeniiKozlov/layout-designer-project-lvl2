@@ -34,15 +34,20 @@
 }
 
 @mixin add-padding($top: false, $right: false, $bottom: false, $left: false) {
-    @if $top { margin-top: rem($top) };
-    @if $right { margin-right: rem($right) };
-    @if $bottom { margin-bottom: rem($bottom) };
-    @if $left { margin-left: rem($left) };
+    @if $top { padding-top: rem($top) };
+    @if $right { padding-right: rem($right) };
+    @if $bottom { padding-bottom: rem($bottom) };
+    @if $left { padding-left: rem($left) };
 }
 
 @mixin add-gap($column-gap: false, $row-gap: false) {
     @if $column-gap { column-gap: rem($column-gap); }
     @if $row-gap { row-gap: rem($row-gap); }
+}
+
+@mixin make-box($width: false, $height: false) {
+  @if $width { width: rem($width) } 
+  @if $height { height: rem($height) } 
 }
 
 /*Flexbox*/
@@ -58,6 +63,9 @@
     @if $align-items { align-items: $align-items};
 }
 
+@mixin add-flexibility($grow: 0, $shrink: 1, $basis: auto) {
+  flex: $grow $shrink convert-to-flex-unit($basis);
+}
 /*Typography*/
 
 @mixin typography($list, $size, $device: "desctop") {
@@ -87,4 +95,14 @@
 	@if $font-size { font-size: rem($font-size) };
 	@if $line-height {line-height: rem($line-height);
 	}
+}
+
+@mixin vertical-align($align: baseline) {
+  vertical-align: $align;
+}
+/*bg-gradient*/
+@mixin gradient($orientation, $start-color, $end-color) {
+  @if $orientation == 'horizontal' {
+    background: -webkit-linear-gradient(right, $start-color, $end-color);
+  }
 }

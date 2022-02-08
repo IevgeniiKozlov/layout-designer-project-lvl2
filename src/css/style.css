@@ -1,6 +1,7 @@
 /*Spacers*/
 /*Flexbox*/
 /*Typography*/
+/*bg-gradient*/
 * {
   box-sizing: border-box;
 }
@@ -63,11 +64,15 @@ html {
 }
 
 .pt-200 {
-  margin-top: 12.5rem;
+  padding-top: 12.5rem;
 }
 
 .pb-200 {
-  margin-bottom: 12.5rem;
+  padding-bottom: 12.5rem;
+}
+
+.hidden {
+  display: none;
 }
 
 @font-face {
@@ -115,15 +120,60 @@ h2 {
   text-transform: uppercase;
   column-gap: 1.5rem;
 }
+.header-navigation .header-menu .menu-item {
+  font-size: 0.6875rem;
+  line-height: 1.03125rem;
+  color: #CACACA;
+  text-transform: uppercase;
+}
 .header-navigation .header-search-block {
   display: flex;
-  margin-left: 28.125rem;
+  margin-left: 15.625rem;
+  width: 15.5rem;
 }
 
-.bg-baner {
+.bg-banner {
   background-image: url("../assets/images/banner.png");
   background-position: center;
   background-size: cover;
+}
+
+.position-banner {
+  padding-top: 12.5rem;
+  padding-bottom: 12.5rem;
+}
+
+.content-banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bg-gradient {
+  background: -webkit-linear-gradient(right, #95390C 14.9%, #5328A1 68.95%);
+}
+
+.nav-footer-upper {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 2.5rem;
+  padding-top: 3.9375rem;
+  padding-bottom: 4.5rem;
+}
+.nav-footer-upper .nav-box {
+  flex: 1 1 16.875rem;
+}
+.nav-footer-upper .nav-box .title {
+  margin-bottom: 0.9375rem;
+}
+.nav-footer-upper .nav-box .footer-menu {
+  display: flex;
+  flex-direction: column;
+}
+.nav-footer-upper .nav-box .footer-menu .menu-item {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: #E0E0E0;
 }
 
 /*# sourceMappingURL=style.css.map */

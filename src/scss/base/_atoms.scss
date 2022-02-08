@@ -13,3 +13,7 @@
 .pb-200 {
     @include add-padding($bottom: 200px);
 }
+
+.hidden {
+    @include display-none;
+}

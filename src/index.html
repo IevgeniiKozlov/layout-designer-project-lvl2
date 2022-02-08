@@ -10,37 +10,89 @@
 <body>
     <header>
         <div class="container">
-            <nav class="header-navigation">
+            <nav class="header-navigation absolute top-25">
                 <div class="header-logo-container">
                     <img class="logo" src="assets/images/logo.svg" alt="logo" width="24px" height="24px">
                     <span>Music box</span>
                 </div>
                     <ul class="header-menu">
-                        <li><a href="#" class="">Главная</a></li>
-                        <li><a href="#">Каталог</a></li>
-                        <li><a href="#">Исполнители</a></li>
-                        <li><a href="#">Контакты</a></li>
+                        <li><a class="menu-item" href="#">Главная</a></li>
+                        <li><a class="menu-item" href="#">Каталог</a></li>
+                        <li><a class="menu-item" href="#">Исполнители</a></li>
+                        <li><a class="menu-item" href="#">Контакты</a></li>
                     </ul>
                 <div class="header-search-block">
-                    <input type="search" placeholder="Поиск...">
+                    <label class="hidden" for="search">Поиск</label>
+                    <input type="search" id="search" placeholder="ПОИСК...">
                 </div>
             </nav>
         </div>
     </header>
     <main>
-        <section class="bg-baner">
+        <section id="page-description" class="bg-banner position-banner">
             <div class="container">
-                <h1 class="pt-200">Онлайн музыка где угодно</h1>
-                <h2>Без ограничений</h2>
-                <p>Получите доступ всего за несколько шагов. Заполните форму ниже и откройте мир музыки</p>
-    
-                <form class="form">
-                    <input class="form-input" type="text" placeholder="Имя">
-                    <input class="form-input" type="email" placeholder="Email">
-                    <button type="submit" class="btn btn-form">Получить доступ</button>
-                </form>
+                <div class="content-banner">
+                    <h1>Онлайн музыка где угодно</h1>
+                    <h2>Без ограничений</h2>
+                    <p>Получите доступ всего за несколько шагов. Заполните форму ниже и откройте мир музыки</p>
+        
+                    <form class="form-survey">  
+                        <div class="form">
+                            <label class="" for="fname">Имя</label>
+                            <input class="" type="text" id="fname" name="fname" placeholder="Имя">
+                        </div>
+                        <div class="form">
+                            <label class="hidden" for="email">Email</label>
+                            <input class="bg-transparent" type="email" id="email" name="email" placeholder="Email">
+                        </div>
+                        <div class="form">
+                            <button class="btn btn-access text-white uppercase bg-green" type="submit">Получить доступ</button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </section>
     </main>
+    <footer class="bg-gradient">
+        <div class="container">
+            <div class="nav-footer-upper">
+                <div class="nav-box">
+                    <h4 class="title">О нас</h4>
+                    <ul class="footer-menu">
+                        <li><a class="menu-item" href="#">История компании</a></li>
+                        <li><a class="menu-item" href="#">Карьера</a></li>
+                        <li><a class="menu-item" href="#">Особенности</a></li>
+                        <li><a class="menu-item" href="#">Пресса</a></li>
+                    </ul>
+                </div>
+                <div class="nav-box">
+                    <h4 class="title">Поддержка</h4>
+                    <ul class="footer-menu">
+                        <li><a class="menu-item" href="#">База знаний</a></li>
+                        <li><a class="menu-item" href="#">Тарифы</a></li>
+                        <li><a class="menu-item" href="#">Мобильное приложение</a></li>
+                        <li><a class="menu-item" href="#">Условия использования</a></li>
+                    </ul>
+                </div>
+                <div class="nav-box">
+                    <h4 class="title">Контакты</h4>
+                    <ul class="footer-menu">
+                        <li><a class="menu-item" href="#">hello@music.box</a></li>
+                        <li><a class="menu-item" href="#">Russia, Moscow. Music Box studio</a></li>
+                        <li><a class="menu-item" href="#">+ 7 499 999 99 99</a></li>
+                    </ul>
+                </div>
+                <div class="nav-box">
+                    <h4 class="title">Подписывайтесь</h4>
+                    <ul class="menu-icon">
+                        <li><img class="icon" src="assets/images/Google+.png" alt="Google icon"></li>
+                        <li><img class="icon" src="assets/images/Twitter.png" alt="Twitter icon"></li>
+                        <li><img class="icon" src="assets/images/Facebook.png" alt="Facebook icon"></li>
+                        <li><img class="icon" src="assets/images/Instagram.png" alt="Instagram icon"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

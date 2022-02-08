@@ -15,3 +15,11 @@
         @return false;
     }
 }
+
+@function convert-to-flex-unit($value) {
+    @if type-of($value) == number and isPxUnit($value) {
+      @return rem($value);
+    } @else {
+      @return $value;
+    }
+}

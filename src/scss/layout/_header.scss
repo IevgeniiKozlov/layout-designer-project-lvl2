@@ -17,16 +17,31 @@
     @include add-align-elements($align-items: center);
     @include text-style($color: white, $transform: uppercase);
     @include add-gap($column-gap: 24px);
+
+    .menu-item {
+      @include font-size(11px, 16.5px);
+      @include text-style($color: dark-gray, $transform: uppercase)
+    }
   }
 
   .header-search-block {
     @include make-flex;
-    @include add-margin($left: 450px)
+    @include add-margin($left: 250px);
+    @include make-box($width: 248px);
   }
 }
 
-.bg-baner {
+.bg-banner {
   background-image: url('../assets/images/banner.png');
   background-position: center;
   background-size: cover;
+}
+
+.position-banner {
+  @include add-padding($top: 200px, $bottom: 200px);
+}
+
+.content-banner {
+  @include make-flex($direction: column);
+  @include add-align-elements($align-items: center)
 }

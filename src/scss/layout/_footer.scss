@@ -1,0 +1,27 @@
+.bg-gradient {
+    @include gradient('horizontal', #95390C 14.9%, #5328A1 68.95%);
+}
+
+.nav-footer-upper {
+    @include make-flex($wrap: wrap);
+    @include add-gap(40px);
+    @include add-padding($top: 63px, $bottom: 72px);
+
+    .nav-box {
+        @include add-flexibility($grow: 1, $basis: 270px);
+
+        .title {
+            @include add-margin($bottom: 15px);
+            @include typography($font-size, "s1");
+        }
+
+        .footer-menu {
+            @include make-flex($direction: column);
+    
+            .menu-item {
+                @include font-size(16px, 24px);
+                @include text-style($color: gray);
+            }
+        }
+    }
+}
